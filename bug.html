@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is visible.
+  </div>
+
+  <script>
+    // Incorrectly using innerHTML to add a <script> tag dynamically
+    document.getElementById("myDiv").innerHTML += '<script>alert("This alert is unexpected!");</script>';
+  </script>
+</body>
+</html>
